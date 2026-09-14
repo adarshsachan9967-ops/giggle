@@ -38,10 +38,24 @@ export function App() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(Boolean(store.getAdminSession()));
 
   useEffect(() => {
+    // Direct URL support for admin access (e.g. /admin or #admin)
+    const checkAdminRoute = () => {
+      if (window.location.pathname === '/admin' || window.location.hash === '#admin') {
+        setCurrentView('admin');
+      }
+    };
+    checkAdminRoute();
+    window.addEventListener('hashchange', checkAdminRoute);
+    window.addEventListener('popstate', checkAdminRoute);
+
     const unsub = store.subscribe(() => {
       setIsAdminLoggedIn(Boolean(store.getAdminSession()));
     });
-    return unsub;
+    return () => {
+      unsub();
+      window.removeEventListener('hashchange', checkAdminRoute);
+      window.removeEventListener('popstate', checkAdminRoute);
+    };
   }, []);
 
   const handleNavigate = (view: string, param?: string) => {
@@ -49,6 +63,13 @@ export function App() {
     setViewParam(param);
     setIsCartOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Sync admin hash for easy bookmarking without public links
+    if (view === 'admin') {
+      window.location.hash = 'admin';
+    } else if (window.location.hash === '#admin') {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
 
     // Dynamic Title Management
     if (view === 'home') {

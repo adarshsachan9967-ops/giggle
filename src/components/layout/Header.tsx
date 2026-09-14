@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Search, ShoppingBag, Heart, User, ShieldCheck, 
+  Search, ShoppingBag, Heart, User, 
   Menu, X, Sparkles, ChevronDown, PackageCheck 
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
@@ -105,27 +105,6 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenC
             >
               <PackageCheck size={14} />
               <span>Track Order</span>
-            </button>
-
-            {/* Direct 1-Click Link to Admin Panel */}
-            <button 
-              onClick={() => onNavigate('admin')}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '5px',
-                backgroundColor: 'rgba(255, 91, 96, 0.2)',
-                color: '#FF767B',
-                padding: '2px 10px',
-                borderRadius: '9999px',
-                fontWeight: 600,
-                fontSize: '0.75rem',
-                border: '1px solid rgba(255, 91, 96, 0.4)'
-              }}
-              title="Open Admin Management Panel"
-            >
-              <ShieldCheck size={13} />
-              <span>Admin Portal</span>
             </button>
           </div>
         </div>

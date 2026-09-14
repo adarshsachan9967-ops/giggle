@@ -168,7 +168,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li><button onClick={() => onNavigate('about')} style={{ color: 'inherit' }}>Careers</button></li>
               <li><button onClick={() => onNavigate('privacy-policy')} style={{ color: 'inherit' }}>Privacy Policy</button></li>
               <li><button onClick={() => onNavigate('terms-conditions')} style={{ color: 'inherit' }}>Terms &amp; Conditions</button></li>
-              <li><button onClick={() => onNavigate('admin')} style={{ color: '#FF5B60', fontWeight: 600 }}>Admin Portal</button></li>
             </ul>
           </div>
 
