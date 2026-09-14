@@ -6,9 +6,10 @@ import { ArrowRight, Lock, Mail, User, Phone, CheckCircle2 } from 'lucide-react'
 
 interface SignupViewProps {
   onNavigate: (view: string, param?: string) => void;
+  redirectTo?: string;
 }
 
-export const SignupView: React.FC<SignupViewProps> = ({ onNavigate }) => {
+export const SignupView: React.FC<SignupViewProps> = ({ onNavigate, redirectTo }) => {
   const { showToast } = useToast();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,7 +26,11 @@ export const SignupView: React.FC<SignupViewProps> = ({ onNavigate }) => {
     const cust = store.loginCustomer(email);
     store.updateCustomerProfile({ name: fullName, phone });
     showToast(`Yay! Welcome to GiggleThreads, ${fullName}! 🎉`, 'success');
-    onNavigate('account', 'dashboard');
+    if (redirectTo === 'checkout') {
+      onNavigate('checkout');
+    } else {
+      onNavigate('account', 'dashboard');
+    }
   };
 
   const handleGoogleSignup = () => {
@@ -33,7 +38,11 @@ export const SignupView: React.FC<SignupViewProps> = ({ onNavigate }) => {
     store.loginCustomer(demoEmail);
     store.updateCustomerProfile({ name: 'Alex Rivera' });
     showToast('Signed in via Google account!', 'success');
-    onNavigate('account', 'dashboard');
+    if (redirectTo === 'checkout') {
+      onNavigate('checkout');
+    } else {
+      onNavigate('account', 'dashboard');
+    }
   };
 
   return (
@@ -186,7 +195,7 @@ export const SignupView: React.FC<SignupViewProps> = ({ onNavigate }) => {
         <div style={{ marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #F1F5F9', fontSize: '0.85rem', color: '#64748B' }}>
           Already part of the family?{' '}
           <button 
-            onClick={() => onNavigate('login')} 
+            onClick={() => onNavigate('login', redirectTo)} 
             style={{ color: '#FF5B60', fontWeight: 700 }}
           >
             Sign In

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ShieldCheck, Lock, CheckCircle2, Truck, CreditCard, 
-  Smartphone, Building, Wallet, Banknote, ArrowRight, ArrowLeft 
+  Smartphone, Building, Wallet, Banknote, ArrowRight, ArrowLeft, LogIn, UserPlus 
 } from 'lucide-react';
 import { store } from '../services/store';
 import { Address, PaymentMethod } from '../types';
@@ -17,29 +17,104 @@ export const CheckoutView: React.FC<CheckoutViewProps> = ({ onNavigate, onOrderS
   const { showToast } = useToast();
   const totals = store.getCartTotals();
   const cart = store.getCart();
+  const currentCustomer = store.getCurrentCustomer();
 
   // Active step: 1 (Address) | 2 (Delivery Method) | 3 (Payment)
   const [currentStep, setCurrentStep] = useState<number>(1);
 
-  // Step 1: Address form
-  const [fullName, setFullName] = useState('Priya Sharma');
-  const [email, setEmail] = useState('priya.sharma@example.com');
-  const [phone, setPhone] = useState('+91 98765 11223');
-  const [addressLine1, setAddressLine1] = useState('Flat 402, Sunshine Heights, 12th Main, Indiranagar');
-  const [city, setCity] = useState('Bengaluru');
-  const [state, setState] = useState('Karnataka');
-  const [pincode, setPincode] = useState('560038');
+  // Step 1: Address form loaded from logged-in customer's profile (or empty for user to enter)
+  const userAddresses = currentCustomer?.addresses || [];
+  const primaryAddr = userAddresses[0];
+
+  const [fullName, setFullName] = useState(currentCustomer?.name || '');
+  const [email, setEmail] = useState(currentCustomer?.email || '');
+  const [phone, setPhone] = useState(currentCustomer?.phone || '');
+  const [addressLine1, setAddressLine1] = useState(primaryAddr?.addressLine1 || '');
+  const [city, setCity] = useState(primaryAddr?.city || '');
+  const [state, setState] = useState(primaryAddr?.state || '');
+  const [pincode, setPincode] = useState(primaryAddr?.pincode || '');
 
   // Step 2: Delivery Speed
   const [deliveryMethod, setDeliveryMethod] = useState<'standard' | 'express'>('standard');
 
   // Step 3: Payment
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('upi');
-  const [upiId, setUpiId] = useState('priya@okhdfcbank');
-  const [cardNumber, setCardNumber] = useState('•••• •••• •••• 4242');
-  const [cardExpiry, setCardExpiry] = useState('12/28');
-  const [cardCvv, setCardCvv] = useState('888');
+  const [upiId, setUpiId] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [cardExpiry, setCardExpiry] = useState('');
+  const [cardCvv, setCardCvv] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
+
+  // Sync with currentCustomer if they log in
+  useEffect(() => {
+    if (currentCustomer) {
+      if (!fullName) setFullName(currentCustomer.name || '');
+      if (!email) setEmail(currentCustomer.email || '');
+      if (!phone) setPhone(currentCustomer.phone || '');
+      if (!addressLine1 && currentCustomer.addresses?.[0]) {
+        setAddressLine1(currentCustomer.addresses[0].addressLine1 || '');
+        setCity(currentCustomer.addresses[0].city || '');
+        setState(currentCustomer.addresses[0].state || '');
+        setPincode(currentCustomer.addresses[0].pincode || '');
+      }
+    }
+  }, [currentCustomer]);
+
+  // If user is not logged in, block checkout and display sign-in prompt
+  if (!currentCustomer) {
+    return (
+      <div className="container" style={{ padding: '60px 20px', display: 'flex', justifyContent: 'center' }}>
+        <div style={{
+          maxWidth: '480px',
+          width: '100%',
+          backgroundColor: '#FFFFFF',
+          borderRadius: '24px',
+          padding: '40px 32px',
+          border: '1px solid #EFE4DC',
+          boxShadow: 'var(--shadow-md)',
+          textAlign: 'center',
+        }}>
+          <div style={{
+            width: '64px',
+            height: '64px',
+            borderRadius: '50%',
+            backgroundColor: 'rgba(255, 91, 96, 0.1)',
+            color: '#FF5B60',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 20px',
+          }}>
+            <Lock size={32} />
+          </div>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1E2229', marginBottom: '10px' }}>
+            Please Log In to Checkout
+          </h2>
+          <p style={{ color: '#64748B', fontSize: '0.92rem', marginBottom: '28px', lineHeight: 1.5 }}>
+            To securely process your order, save your delivery details, and enable live tracking, please sign in or create an account.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <button 
+              className="btn btn-primary" 
+              style={{ width: '100%', padding: '14px', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+              onClick={() => onNavigate('login', 'checkout')}
+            >
+              <LogIn size={18} />
+              <span>Sign In to Continue</span>
+            </button>
+            <button 
+              className="btn btn-secondary" 
+              style={{ width: '100%', padding: '14px', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+              onClick={() => onNavigate('signup', 'checkout')}
+            >
+              <UserPlus size={18} />
+              <span>Create New Account</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (cart.length === 0) {
     return (

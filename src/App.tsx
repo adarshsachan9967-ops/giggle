@@ -152,6 +152,14 @@ export function App() {
         );
 
       case 'checkout':
+        if (!store.isCustomerLoggedIn()) {
+          return (
+            <LoginView 
+              redirectTo="checkout" 
+              onNavigate={handleNavigate} 
+            />
+          );
+        }
         return (
           <CheckoutView 
             onNavigate={handleNavigate} 
@@ -171,10 +179,10 @@ export function App() {
         return <AccountView initialTab={viewParam || 'dashboard'} onNavigate={handleNavigate} />;
 
       case 'login':
-        return <LoginView onNavigate={handleNavigate} />;
+        return <LoginView redirectTo={viewParam} onNavigate={handleNavigate} />;
 
       case 'signup':
-        return <SignupView onNavigate={handleNavigate} />;
+        return <SignupView redirectTo={viewParam} onNavigate={handleNavigate} />;
 
       case 'about':
         return <AboutView onNavigate={handleNavigate} />;

@@ -75,6 +75,11 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, onNavig
 
   const handleProceedToCheckout = () => {
     onClose();
+    if (!store.isCustomerLoggedIn()) {
+      showToast('Please sign in or create an account to proceed to checkout 🎁', 'info');
+      onNavigate('login', 'checkout');
+      return;
+    }
     onNavigate('checkout');
   };
 

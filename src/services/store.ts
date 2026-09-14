@@ -58,9 +58,18 @@ class Store {
       this.reviews = this.loadFromStorage(STORAGE_KEYS.REVIEWS, INITIAL_REVIEWS);
       this.settings = this.loadFromStorage(STORAGE_KEYS.SETTINGS, INITIAL_SETTINGS);
       this.cart = this.loadFromStorage(STORAGE_KEYS.CART, []);
-      this.wishlist = this.loadFromStorage(STORAGE_KEYS.WISHLIST, ['gt-prod-01', 'gt-prod-09', 'gt-prod-31']);
+      this.wishlist = this.loadFromStorage(STORAGE_KEYS.WISHLIST, []);
       this.appliedCoupon = this.loadFromStorage(STORAGE_KEYS.APPLIED_COUPON, null);
-      this.currentCustomer = this.loadFromStorage(STORAGE_KEYS.CURRENT_USER, this.customers[0] || null);
+      
+      // Default: Guest visitor (User must explicitly log in or register before checking out)
+      const savedCustomer = this.loadFromStorage<Customer | null>(STORAGE_KEYS.CURRENT_USER, null);
+      if (savedCustomer?.email === 'priya.sharma@example.com') {
+        this.currentCustomer = null;
+        localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
+      } else {
+        this.currentCustomer = savedCustomer;
+      }
+
       this.adminSession = this.loadFromStorage(STORAGE_KEYS.ADMIN_SESSION, null);
       this.auditLogs = this.loadFromStorage(STORAGE_KEYS.AUDIT_LOGS, [
         { id: 'log-1', action: 'Store Initialized', user: 'System', timestamp: new Date().toISOString(), details: '52 Products and seed catalogs loaded.' }
@@ -589,6 +598,10 @@ class Store {
 
   public getCurrentCustomer(): Customer | null {
     return this.currentCustomer;
+  }
+
+  public isCustomerLoggedIn(): boolean {
+    return this.currentCustomer !== null;
   }
 
   public updateCustomerProfile(updates: Partial<Customer>): Customer | null {

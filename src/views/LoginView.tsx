@@ -6,9 +6,10 @@ import { ArrowRight, Sparkles, Lock, Mail } from 'lucide-react';
 
 interface LoginViewProps {
   onNavigate: (view: string, param?: string) => void;
+  redirectTo?: string;
 }
 
-export const LoginView: React.FC<LoginViewProps> = ({ onNavigate }) => {
+export const LoginView: React.FC<LoginViewProps> = ({ onNavigate, redirectTo }) => {
   const { showToast } = useToast();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,7 +23,11 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate }) => {
     }
     store.loginCustomer(email);
     showToast(`Welcome back to GiggleThreads, ${email.split('@')[0]}! 🎉`, 'success');
-    onNavigate('account', 'dashboard');
+    if (redirectTo === 'checkout') {
+      onNavigate('checkout');
+    } else {
+      onNavigate('account', 'dashboard');
+    }
   };
 
   const handleQuickDemoLogin = () => {
@@ -30,7 +35,11 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate }) => {
     setPassword('giggle123');
     store.loginCustomer('priya.sharma@example.com');
     showToast('Logged in as demo customer Priya Sharma! 🎁', 'success');
-    onNavigate('account', 'dashboard');
+    if (redirectTo === 'checkout') {
+      onNavigate('checkout');
+    } else {
+      onNavigate('account', 'dashboard');
+    }
   };
 
   return (
@@ -154,7 +163,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onNavigate }) => {
         <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid #F1F5F9', fontSize: '0.85rem', color: '#64748B' }}>
           Don't have an account yet?{' '}
           <button 
-            onClick={() => onNavigate('signup')} 
+            onClick={() => onNavigate('signup', redirectTo)} 
             style={{ color: '#FF5B60', fontWeight: 700 }}
           >
             Create Account

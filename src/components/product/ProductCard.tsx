@@ -35,6 +35,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onNavigate, o
   const handleBuyNow = (e: React.MouseEvent) => {
     e.stopPropagation();
     store.addToCart(product, 1);
+    if (!store.isCustomerLoggedIn()) {
+      showToast('Please sign in or create an account to proceed to checkout 🎁', 'info');
+      onNavigate('login', 'checkout');
+      return;
+    }
     onNavigate('checkout');
   };
 

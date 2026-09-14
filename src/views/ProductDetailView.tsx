@@ -111,6 +111,11 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
 
   const handleBuyNow = () => {
     store.addToCart(product, quantity, selectedVariant, customText, giftWrap, giftMessage);
+    if (!store.isCustomerLoggedIn()) {
+      showToast('Please sign in or create an account to proceed to checkout 🎁', 'info');
+      onNavigate('login', 'checkout');
+      return;
+    }
     onNavigate('checkout');
   };
 
