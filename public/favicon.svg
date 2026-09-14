@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gtGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#FF4757" />
+    </linearGradient>
+    <linearGradient id="gtGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC048" />
+      <stop offset="100%" stop-color="#FFA801" />
+    </linearGradient>
+  </defs>
+  <!-- Background rounded squircle -->
+  <rect width="64" height="64" rx="18" fill="url(#gtGradient)" />
+  
+  <!-- Ribbon Loop (Threads motif) -->
+  <path d="M22 23 C22 17, 30 17, 32 23 C34 17, 42 17, 42 23 C42 29, 32 35, 32 35 C32 35, 22 29, 22 23 Z" fill="url(#gtGold)" />
+  <circle cx="32" cy="24" r="3.5" fill="#FFFFFF" />
+  
+  <!-- Giggle Smile Arc with thread knots -->
+  <path d="M19 36 C24 46, 40 46, 45 36" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none" />
+  <circle cx="17.5" cy="35" r="2.5" fill="#FFC048" />
+  <circle cx="46.5" cy="35" r="2.5" fill="#FFC048" />
+</svg>
