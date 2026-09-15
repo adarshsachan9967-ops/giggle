@@ -38,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
           alignItems: 'center',
           gap: '48px',
         }}>
@@ -150,61 +150,63 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             {/* Floating Highlight Card 1 */}
             <div style={{
               position: 'absolute',
-              top: '24px',
-              left: '-24px',
+              top: '20px',
+              left: '12px',
               backgroundColor: 'rgba(255, 255, 255, 0.95)',
               backdropFilter: 'blur(8px)',
-              padding: '12px 18px',
-              borderRadius: '18px',
+              padding: '10px 16px',
+              borderRadius: '16px',
               boxShadow: '0 12px 28px rgba(0, 0, 0, 0.12)',
               border: '1px solid #EFE4DC',
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
+              gap: '10px',
+              maxWidth: 'calc(100% - 24px)',
               animation: 'pulseSubtle 4s infinite ease-in-out',
             }}>
               <div style={{
                 backgroundColor: '#FFF0F1',
                 color: '#FF5B60',
-                padding: '10px',
+                padding: '8px',
                 borderRadius: '50%',
                 display: 'flex',
               }}>
-                <Smile size={22} />
+                <Smile size={20} />
               </div>
               <div>
-                <div style={{ fontSize: '0.78rem', color: '#64748B', fontWeight: 600 }}>Cuddle Happiness</div>
-                <div style={{ fontSize: '0.92rem', fontWeight: 800, color: '#1E2229' }}>GiggleBear Classic Teddy</div>
+                <div style={{ fontSize: '0.75rem', color: '#64748B', fontWeight: 600 }}>Cuddle Happiness</div>
+                <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#1E2229' }}>GiggleBear Classic Teddy</div>
               </div>
             </div>
 
             {/* Floating Highlight Card 2 */}
             <div style={{
               position: 'absolute',
-              bottom: '24px',
-              right: '-16px',
+              bottom: '20px',
+              right: '12px',
               backgroundColor: 'rgba(255, 255, 255, 0.95)',
               backdropFilter: 'blur(8px)',
-              padding: '12px 20px',
-              borderRadius: '18px',
+              padding: '10px 16px',
+              borderRadius: '16px',
               boxShadow: '0 12px 28px rgba(0, 0, 0, 0.12)',
               border: '1px solid #EFE4DC',
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
+              gap: '10px',
+              maxWidth: 'calc(100% - 24px)',
             }}>
               <div style={{
                 backgroundColor: '#FEF3C7',
                 color: '#F59E0B',
-                padding: '10px',
+                padding: '8px',
                 borderRadius: '50%',
                 display: 'flex',
               }}>
-                <Sparkles size={22} />
+                <Sparkles size={20} />
               </div>
               <div>
-                <div style={{ fontSize: '0.78rem', color: '#64748B', fontWeight: 600 }}>Unboxing Joy</div>
-                <div style={{ fontSize: '0.92rem', fontWeight: 800, color: '#1E2229' }}>Curated Gift Hampers</div>
+                <div style={{ fontSize: '0.75rem', color: '#64748B', fontWeight: 600 }}>Unboxing Joy</div>
+                <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#1E2229' }}>Curated Gift Hampers</div>
               </div>
             </div>
           </div>

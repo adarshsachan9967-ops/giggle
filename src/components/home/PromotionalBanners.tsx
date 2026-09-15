@@ -82,7 +82,7 @@ export const PromotionalBanners: React.FC<PromotionalBannersProps> = ({ onNaviga
           <div style={{
             position: 'relative',
             zIndex: 2,
-            padding: '48px 56px',
+            padding: 'clamp(28px, 6vw, 48px) clamp(20px, 6vw, 56px)',
             maxWidth: '650px',
             display: 'flex',
             flexDirection: 'column',
@@ -110,7 +110,7 @@ export const PromotionalBanners: React.FC<PromotionalBannersProps> = ({ onNaviga
             )}
 
             <h2 style={{
-              fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+              fontSize: 'clamp(1.6rem, 4vw, 2.5rem)',
               fontWeight: 800,
               color: '#FFFFFF',
               lineHeight: 1.2,
@@ -121,17 +121,17 @@ export const PromotionalBanners: React.FC<PromotionalBannersProps> = ({ onNaviga
             </h2>
 
             <p style={{
-              fontSize: '1.05rem',
+              fontSize: 'clamp(0.92rem, 2.5vw, 1.05rem)',
               color: '#E2E8F0',
               lineHeight: 1.5,
-              marginBottom: '26px',
+              marginBottom: '24px',
             }}>
               {currentBanner.subtitle}
             </p>
 
             <button 
               className="btn btn-primary"
-              style={{ width: 'fit-content', padding: '12px 26px', fontSize: '1rem' }}
+              style={{ width: 'fit-content', padding: '10px 22px', fontSize: '0.95rem' }}
               onClick={handleCtaClick}
             >
               <span>{currentBanner.ctaText}</span>
@@ -142,12 +142,12 @@ export const PromotionalBanners: React.FC<PromotionalBannersProps> = ({ onNaviga
           {/* Controls: Prev / Next buttons */}
           <div style={{
             position: 'absolute',
-            bottom: '24px',
-            right: '28px',
+            bottom: '16px',
+            right: '16px',
             zIndex: 3,
             display: 'flex',
             alignItems: 'center',
-            gap: '12px',
+            gap: '10px',
           }}>
             <button 
               onClick={handlePrev}

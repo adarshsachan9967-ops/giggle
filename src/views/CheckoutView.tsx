@@ -215,7 +215,7 @@ export const CheckoutView: React.FC<CheckoutViewProps> = ({ onNavigate, onOrderS
         {/* Step Indicator */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))',
           gap: '12px',
           marginBottom: '36px',
         }}>
@@ -263,7 +263,7 @@ export const CheckoutView: React.FC<CheckoutViewProps> = ({ onNavigate, onOrderS
         </div>
 
         {/* Main 2-Column Layout */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '32px' }}>
+        <div className="checkout-layout-grid">
           {/* Left Form Area */}
           <div>
             {/* STEP 1: Delivery Address */}

@@ -112,7 +112,7 @@ export const AccountView: React.FC<AccountViewProps> = ({ initialTab = 'dashboar
         </div>
 
         {/* 2-Column Layout */}
-        <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '32px' }}>
+        <div className="account-layout-grid">
           {/* Sidebar Menu */}
           <div style={{
             backgroundColor: '#FFFFFF',

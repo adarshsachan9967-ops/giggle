@@ -151,7 +151,7 @@ export const CatalogView: React.FC<CatalogViewProps> = ({
         </div>
 
         {/* Main Content Layout with Sidebar Filter */}
-        <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '32px' }}>
+        <div className="catalog-layout-grid">
           {/* Left Sidebar Filter */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <div style={{

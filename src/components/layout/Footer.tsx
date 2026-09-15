@@ -30,11 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       {/* Value Proposition Bar */}
       <div style={{ borderBottom: '1px solid #282E3A', padding: '36px 0', backgroundColor: '#1E232D' }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '24px',
-          }}>
+          <div className="footer-props-grid">
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <div style={{
                 backgroundColor: 'rgba(255, 91, 96, 0.15)',
@@ -104,11 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
       {/* Main Footer Content */}
       <div className="container" style={{ padding: '64px 20px 48px' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '2fr 1fr 1fr 1fr 1.5fr',
-          gap: '40px',
-        }}>
+        <div className="footer-main-grid">
           {/* Brand Info */}
           <div>
             <Logo variant="white" size="lg" showTagline={true} onClick={() => onNavigate('home')} />
@@ -237,14 +229,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           gap: '16px',
           fontSize: '0.8rem',
           color: '#64748B',
+          lineHeight: 1.6,
         }}>
           <div>
-            &copy; {new Date().getFullYear()} <strong>GiggleThreads</strong>. All rights reserved. Made with love for little moments and big smiles.
+            &copy; 2025 <strong>GiggleThreads</strong>. All rights reserved. Made with love for little moments and big smiles.
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px' }}>
             <span>Razorpay Secure Payments (UPI, Cards, NetBanking, COD)</span>
-            <span>•</span>
+            <span className="desktop-only">•</span>
             <button onClick={() => onNavigate('privacy-policy')} style={{ color: 'inherit' }}>Privacy</button>
             <button onClick={() => onNavigate('terms-conditions')} style={{ color: 'inherit' }}>Terms</button>
           </div>

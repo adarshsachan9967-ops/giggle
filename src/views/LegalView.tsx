@@ -53,7 +53,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
         </div>
 
         {/* 2-Column Tabs Layout */}
-        <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr', gap: '32px' }}>
+        <div className="legal-layout-grid">
           {/* Tabs Menu */}
           <div style={{
             backgroundColor: '#FFFFFF',
