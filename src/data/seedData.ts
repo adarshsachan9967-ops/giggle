@@ -5,7 +5,7 @@ export const INITIAL_SETTINGS: StoreSettings = {
   tagline: 'Gifts That Spark Giggles & Memories.',
   supportEmail: 'care@gigglethreads.com',
   supportPhone: '+91 98765 43210',
-  address: 'GiggleThreads Studio, 42 Happiness Lane, Indiranagar, Bengaluru, KA 560038',
+  address: '707, 7th Floor, Satyam, RDC, Raj Nagar, Ghaziabad, UP, IND 201002',
   freeShippingThreshold: 999,
   standardShippingRate: 49,
   expressShippingRate: 149,

@@ -57,6 +57,10 @@ class Store {
       this.customers = this.loadFromStorage(STORAGE_KEYS.CUSTOMERS, INITIAL_CUSTOMERS);
       this.reviews = this.loadFromStorage(STORAGE_KEYS.REVIEWS, INITIAL_REVIEWS);
       this.settings = this.loadFromStorage(STORAGE_KEYS.SETTINGS, INITIAL_SETTINGS);
+      if (this.settings?.address?.includes('Happiness Lane') || this.settings?.address?.includes('Indiranagar')) {
+        this.settings.address = INITIAL_SETTINGS.address;
+        this.saveToStorage(STORAGE_KEYS.SETTINGS, this.settings);
+      }
       this.cart = this.loadFromStorage(STORAGE_KEYS.CART, []);
       this.wishlist = this.loadFromStorage(STORAGE_KEYS.WISHLIST, []);
       this.appliedCoupon = this.loadFromStorage(STORAGE_KEYS.APPLIED_COUPON, null);

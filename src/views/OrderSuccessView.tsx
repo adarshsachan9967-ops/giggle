@@ -13,6 +13,7 @@ interface OrderSuccessViewProps {
 
 export const OrderSuccessView: React.FC<OrderSuccessViewProps> = ({ orderId, onNavigate }) => {
   const order = store.getOrderById(orderId) || store.getOrders()[0];
+  const settings = store.getSettings();
 
   if (!order) {
     return (
@@ -136,8 +137,8 @@ export const OrderSuccessView: React.FC<OrderSuccessViewProps> = ({ orderId, onN
               <Logo variant="invoice" size="md" showTagline={true} />
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '8px', lineHeight: 1.4 }}>
                 GiggleThreads Private Limited<br />
-                42 Happiness Lane, Indiranagar, Bengaluru, KA 560038<br />
-                GSTIN: 29AABCU9603R1ZM • care@gigglethreads.com
+                {settings?.address || '707, 7th Floor, Satyam, RDC, Raj Nagar, Ghaziabad, UP, IND 201002'}<br />
+                GSTIN: 29AABCU9603R1ZM • {settings?.supportEmail || 'care@gigglethreads.com'}
               </div>
             </div>
 
