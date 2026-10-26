@@ -620,13 +620,17 @@ export const AccountView: React.FC<AccountViewProps> = ({ initialTab = 'dashboar
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '28px' }}>
                   <div style={{ backgroundColor: '#F8FAFC', padding: '18px', borderRadius: '14px', border: '1px solid #E2E8F0' }}>
                     <div style={{ fontWeight: 700, color: '#1E2229', marginBottom: '4px' }}>Email Care Team</div>
-                    <div style={{ fontSize: '0.88rem', color: '#FF5B60', fontWeight: 600 }}>care@gigglethreads.com</div>
+                    <a href="mailto:threadpvtltdgiggles@gmail.com" style={{ fontSize: '0.88rem', color: '#FF5B60', fontWeight: 600, textDecoration: 'none', wordBreak: 'break-all' }}>
+                      threadpvtltdgiggles@gmail.com
+                    </a>
                     <div style={{ fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>Response within 2-4 hours</div>
                   </div>
 
                   <div style={{ backgroundColor: '#F8FAFC', padding: '18px', borderRadius: '14px', border: '1px solid #E2E8F0' }}>
                     <div style={{ fontWeight: 700, color: '#1E2229', marginBottom: '4px' }}>WhatsApp &amp; Phone</div>
-                    <div style={{ fontSize: '0.88rem', color: '#059669', fontWeight: 600 }}>+91 98765 43210</div>
+                    <a href="tel:+919211323431" style={{ fontSize: '0.88rem', color: '#059669', fontWeight: 600, textDecoration: 'none' }}>
+                      +91 92113 23431
+                    </a>
                     <div style={{ fontSize: '0.78rem', color: '#64748B', marginTop: '4px' }}>Mon - Sat: 9 AM to 8 PM</div>
                   </div>
                 </div>

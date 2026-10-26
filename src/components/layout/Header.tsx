@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Search, ShoppingBag, Heart, User, 
   Menu, X, Sparkles, ChevronDown, PackageCheck,
-  Phone, HelpCircle, Info, LogOut
+  Phone, Mail, HelpCircle, Info, LogOut
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
 import { store } from '../../services/store';
@@ -720,6 +720,17 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenC
             <Phone size={16} />
             <span>Contact &amp; Support</span>
           </button>
+
+          <div style={{ padding: '8px 12px', display: 'flex', flexDirection: 'column', gap: '6px', backgroundColor: '#F8FAFC', borderRadius: '10px', margin: '4px 8px 8px', border: '1px solid #E2E8F0' }}>
+            <a href="tel:+919211323431" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: '#059669', textDecoration: 'none', fontWeight: 600 }}>
+              <Phone size={13} />
+              <span>+91 92113 23431</span>
+            </a>
+            <a href="mailto:threadpvtltdgiggles@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.78rem', color: '#FF5B60', textDecoration: 'none', fontWeight: 600, wordBreak: 'break-all' }}>
+              <Mail size={13} />
+              <span>threadpvtltdgiggles@gmail.com</span>
+            </a>
+          </div>
 
           <button 
             onClick={() => handleMobileNav('faq')}

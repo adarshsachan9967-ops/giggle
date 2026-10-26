@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  Mail, ShieldCheck, Truck, RotateCcw, HeartHandshake, CheckCircle2 
+  Mail, Phone, ShieldCheck, Truck, RotateCcw, HeartHandshake, CheckCircle2 
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
 import { useToast } from '../../context/ToastContext';
@@ -108,6 +108,60 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               At <strong>GiggleThreads</strong>, we believe the best gifts are the ones that create a moment. From cuddly companions to thoughtful personalized surprises, we craft smiles worth remembering.
             </p>
 
+            {/* Contact Details */}
+            <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <a 
+                href="mailto:threadpvtltdgiggles@gmail.com" 
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: '10px', 
+                  color: '#CBD5E1', 
+                  textDecoration: 'none',
+                  fontSize: '0.85rem',
+                  wordBreak: 'break-all',
+                  transition: 'color 0.2s',
+                }}
+              >
+                <div style={{
+                  backgroundColor: 'rgba(255, 91, 96, 0.15)',
+                  color: '#FF5B60',
+                  padding: '6px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  flexShrink: 0,
+                }}>
+                  <Mail size={14} />
+                </div>
+                <span>threadpvtltdgiggles@gmail.com</span>
+              </a>
+
+              <a 
+                href="tel:+919211323431" 
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: '10px', 
+                  color: '#CBD5E1', 
+                  textDecoration: 'none',
+                  fontSize: '0.85rem',
+                  transition: 'color 0.2s',
+                }}
+              >
+                <div style={{
+                  backgroundColor: 'rgba(6, 214, 160, 0.15)',
+                  color: '#06D6A0',
+                  padding: '6px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  flexShrink: 0,
+                }}>
+                  <Phone size={14} />
+                </div>
+                <span>+91 92113 23431</span>
+              </a>
+            </div>
+
             <div style={{ display: 'flex', gap: '12px', marginTop: '20px' }}>
               <a href="#instagram" style={{ color: '#94A3B8', padding: '8px', backgroundColor: '#282E3A', borderRadius: '50%', display: 'flex' }} aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -144,6 +198,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 style={{ color: '#FFFFFF', fontSize: '1rem', marginBottom: '18px', fontWeight: 700 }}>Help</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: '#94A3B8' }}>
               <li><button onClick={() => onNavigate('contact')} style={{ color: 'inherit' }}>Contact Us</button></li>
+              <li>
+                <a href="tel:+919211323431" style={{ color: '#06D6A0', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Phone size={13} />
+                  <span>+91 92113 23431</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:threadpvtltdgiggles@gmail.com" style={{ color: '#FF5B60', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px', wordBreak: 'break-all' }}>
+                  <Mail size={13} />
+                  <span>threadpvtltdgiggles@gmail.com</span>
+                </a>
+              </li>
               <li><button onClick={() => onNavigate('faq')} style={{ color: 'inherit' }}>FAQ</button></li>
               <li><button onClick={() => onNavigate('shipping-policy')} style={{ color: 'inherit' }}>Shipping Policy</button></li>
               <li><button onClick={() => onNavigate('refund-policy')} style={{ color: 'inherit' }}>Returns &amp; Refunds</button></li>

@@ -61,6 +61,14 @@ class Store {
         this.settings.address = INITIAL_SETTINGS.address;
         this.saveToStorage(STORAGE_KEYS.SETTINGS, this.settings);
       }
+      if (!this.settings?.supportEmail || this.settings.supportEmail.includes('care@gigglethreads.com')) {
+        this.settings.supportEmail = INITIAL_SETTINGS.supportEmail;
+        this.saveToStorage(STORAGE_KEYS.SETTINGS, this.settings);
+      }
+      if (!this.settings?.supportPhone || this.settings.supportPhone.includes('98765 43210') || this.settings.supportPhone.includes('98765')) {
+        this.settings.supportPhone = INITIAL_SETTINGS.supportPhone;
+        this.saveToStorage(STORAGE_KEYS.SETTINGS, this.settings);
+      }
       this.cart = this.loadFromStorage(STORAGE_KEYS.CART, []);
       this.wishlist = this.loadFromStorage(STORAGE_KEYS.WISHLIST, []);
       this.appliedCoupon = this.loadFromStorage(STORAGE_KEYS.APPLIED_COUPON, null);

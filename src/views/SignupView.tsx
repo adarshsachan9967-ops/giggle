@@ -153,7 +153,7 @@ export const SignupView: React.FC<SignupViewProps> = ({ onNavigate, redirectTo }
                 type="tel" 
                 className="form-input" 
                 style={{ paddingLeft: '38px' }}
-                placeholder="+91 98765 43210"
+                placeholder="+91 92113 23431"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required

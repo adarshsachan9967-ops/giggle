@@ -3,8 +3,8 @@ import { Product, CategoryInfo, OccasionInfo, Banner, Coupon, Order, Customer, S
 export const INITIAL_SETTINGS: StoreSettings = {
   storeName: 'GiggleThreads',
   tagline: 'Gifts That Spark Giggles & Memories.',
-  supportEmail: 'care@gigglethreads.com',
-  supportPhone: '+91 98765 43210',
+  supportEmail: 'threadpvtltdgiggles@gmail.com',
+  supportPhone: '+91 92113 23431',
   address: '707, 7th Floor, Satyam, RDC, Raj Nagar, Ghaziabad, UP, IND 201002',
   freeShippingThreshold: 999,
   standardShippingRate: 49,

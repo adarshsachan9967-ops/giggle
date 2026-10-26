@@ -17,7 +17,7 @@ const FAQS: FaqItem[] = [
   {
     category: 'Orders',
     q: 'Can I modify or cancel my order after placing it?',
-    a: 'Yes, orders can be cancelled or modified within 2 hours of placing them before they enter the personalization and packing queue. Reach out immediately to care@gigglethreads.com or call +91 98765 43210 with your Order Number.',
+    a: 'Yes, orders can be cancelled or modified within 2 hours of placing them before they enter the personalization and packing queue. Reach out immediately to threadpvtltdgiggles@gmail.com or call +91 92113 23431 with your Order Number.',
   },
 
   // Shipping & Delivery
@@ -67,7 +67,7 @@ const FAQS: FaqItem[] = [
   {
     category: 'Returns',
     q: 'What is GiggleThreads’ return and replacement policy?',
-    a: 'We offer a 7-Day Hassle-Free Replacement for any defective, damaged, or incorrect products. Simply email photo proof of the item to care@gigglethreads.com within 7 days of delivery, and our team will arrange a free courier pickup and dispatch a brand-new replacement immediately.',
+    a: 'We offer a 7-Day Hassle-Free Replacement for any defective, damaged, or incorrect products. Simply email photo proof of the item to threadpvtltdgiggles@gmail.com within 7 days of delivery, and our team will arrange a free courier pickup and dispatch a brand-new replacement immediately.',
   },
   {
     category: 'Returns',

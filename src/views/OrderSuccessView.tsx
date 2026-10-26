@@ -138,7 +138,7 @@ export const OrderSuccessView: React.FC<OrderSuccessViewProps> = ({ orderId, onN
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '8px', lineHeight: 1.4 }}>
                 GiggleThreads Private Limited<br />
                 {settings?.address || '707, 7th Floor, Satyam, RDC, Raj Nagar, Ghaziabad, UP, IND 201002'}<br />
-                GSTIN: 29AABCU9603R1ZM • {settings?.supportEmail || 'care@gigglethreads.com'}
+                GSTIN: 29AABCU9603R1ZM • {settings?.supportEmail || 'threadpvtltdgiggles@gmail.com'} • {settings?.supportPhone || '+91 92113 23431'}
               </div>
             </div>
 

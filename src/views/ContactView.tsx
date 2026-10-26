@@ -62,7 +62,9 @@ export const ContactView: React.FC = () => {
                   </div>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#1E2229' }}>Email Us</div>
-                    <div style={{ color: '#475569', fontSize: '0.88rem' }}>{settings.supportEmail}</div>
+                    <a href={`mailto:${settings.supportEmail}`} style={{ color: '#FF5B60', fontSize: '0.88rem', textDecoration: 'none', fontWeight: 600 }}>
+                      {settings.supportEmail}
+                    </a>
                     <div style={{ fontSize: '0.76rem', color: '#64748B' }}>Average response time: 2 hours</div>
                   </div>
                 </div>
@@ -73,7 +75,9 @@ export const ContactView: React.FC = () => {
                   </div>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#1E2229' }}>Phone &amp; WhatsApp</div>
-                    <div style={{ color: '#475569', fontSize: '0.88rem' }}>{settings.supportPhone}</div>
+                    <a href="tel:+919211323431" style={{ color: '#059669', fontSize: '0.88rem', textDecoration: 'none', fontWeight: 600 }}>
+                      {settings.supportPhone}
+                    </a>
                     <div style={{ fontSize: '0.76rem', color: '#64748B' }}>Mon - Sat: 9:00 AM - 8:00 PM IST</div>
                   </div>
                 </div>
@@ -104,25 +108,32 @@ export const ContactView: React.FC = () => {
             </div>
 
             {/* WhatsApp Direct Chat Banner */}
-            <div style={{
-              backgroundColor: '#E6FBF5',
-              border: '1.5px solid #A7F3D0',
-              borderRadius: '20px',
-              padding: '24px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-            }}>
+            <a 
+              href="https://wa.me/919211323431" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                backgroundColor: '#E6FBF5',
+                border: '1.5px solid #A7F3D0',
+                borderRadius: '20px',
+                padding: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '16px',
+                textDecoration: 'none',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+              }}
+            >
               <MessageCircle size={32} color="#059669" />
               <div>
                 <div style={{ fontWeight: 800, color: '#065F46', fontSize: '0.95rem' }}>
                   Need Immediate Gifting Advice?
                 </div>
                 <div style={{ fontSize: '0.82rem', color: '#047857' }}>
-                  Chat with a GiggleThreads Gift Stylist on WhatsApp for instant birthday and anniversary recommendations.
+                  Chat with a GiggleThreads Gift Stylist on WhatsApp (+91 92113 23431) for instant birthday and anniversary recommendations.
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Interactive Form Card */}
@@ -190,7 +201,7 @@ export const ContactView: React.FC = () => {
                     <input 
                       type="tel" 
                       className="form-input" 
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 92113 23431"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                     />
