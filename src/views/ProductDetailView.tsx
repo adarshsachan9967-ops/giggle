@@ -132,6 +132,19 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
     showToast(added ? 'Saved for a Smile ❤️' : 'Removed from Wishlist', 'info');
   };
 
+  const handleShare = () => {
+    const url = window.location.href;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Product link copied to clipboard! 📋', 'success');
+      }).catch(() => {
+        showToast(`Product URL: ${url}`, 'info');
+      });
+    } else {
+      showToast(`Product URL: ${url}`, 'info');
+    }
+  };
+
   const handleSubmitReview = (e: React.FormEvent) => {
     e.preventDefault();
     if (!reviewName || !reviewTitle || !reviewComment) {
@@ -206,15 +219,26 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
                 </div>
               )}
 
-              <button 
-                onClick={handleToggleWishlist}
-                className={`product-card-wishlist ${isWishlisted ? 'active' : ''}`}
-                style={{ position: 'absolute', top: '16px', right: '16px', width: '42px', height: '42px' }}
-                title="Save for a Smile"
-                aria-label="Wishlist"
-              >
-                <Heart size={22} fill={isWishlisted ? '#FF5B60' : 'none'} color={isWishlisted ? '#FF5B60' : '#475569'} />
-              </button>
+              <div style={{ position: 'absolute', top: '16px', right: '16px', display: 'flex', gap: '8px' }}>
+                <button 
+                  onClick={handleShare}
+                  className="product-card-wishlist"
+                  style={{ width: '42px', height: '42px' }}
+                  title="Share / Copy Link"
+                  aria-label="Share"
+                >
+                  <Share2 size={18} color="#475569" />
+                </button>
+                <button 
+                  onClick={handleToggleWishlist}
+                  className={`product-card-wishlist ${isWishlisted ? 'active' : ''}`}
+                  style={{ width: '42px', height: '42px' }}
+                  title="Save for a Smile"
+                  aria-label="Wishlist"
+                >
+                  <Heart size={22} fill={isWishlisted ? '#FF5B60' : 'none'} color={isWishlisted ? '#FF5B60' : '#475569'} />
+                </button>
+              </div>
             </div>
 
             {/* Thumbnail switcher */}
