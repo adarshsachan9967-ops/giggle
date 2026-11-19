@@ -24,7 +24,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
             marginBottom: '16px',
           }}>
             <Smile size={16} />
-            <span>THE GIGGLETHREADS JOURNEY</span>
+            <span>THE GIGGLE THREADS PRIVATE LIMITED JOURNEY</span>
           </div>
 
           <h1 style={{
@@ -38,7 +38,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
           </h1>
 
           <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: 1.7, maxWidth: '720px', margin: '0 auto' }}>
-            At <strong>GiggleThreads</strong>, we craft joyful toys, cuddly companions, and bespoke keepsakes that turn everyday celebrations into forever memories.
+            At <strong>Giggle Threads Private Limited</strong>, we craft joyful toys, cuddly companions, and bespoke keepsakes that turn everyday celebrations into forever memories.
           </p>
         </div>
 
@@ -52,10 +52,10 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
           marginBottom: '40px',
         }}>
           <h2 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1E2229', marginBottom: '16px' }}>
-            How GiggleThreads Began
+            How Giggle Threads Private Limited Began
           </h2>
           <p style={{ fontSize: '1rem', color: '#475569', lineHeight: 1.8, marginBottom: '20px' }}>
-            GiggleThreads was born from a simple realization: in an era of hurried digital gift cards and impersonal plastic trinkets, the heart-melting excitement of unwrapping a truly thoughtful gift was slowly disappearing. We wanted to build a sanctuary where gifts aren’t just purchased, but treasured.
+            Giggle Threads Private Limited was born from a simple realization: in an era of hurried digital gift cards and impersonal plastic trinkets, the heart-melting excitement of unwrapping a truly thoughtful gift was slowly disappearing. We wanted to build a sanctuary where gifts aren’t just purchased, but treasured.
           </p>
           <p style={{ fontSize: '1rem', color: '#475569', lineHeight: 1.8, marginBottom: '20px' }}>
             From our design workshop in Bengaluru, our team of passionate artisans, child-development educators, and storytellers handpick, test, and package every single toy, cuddle bear, and personalized frame. We treat each box as if it were being opened by our own family.
@@ -108,7 +108,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
             </div>
             <h3 style={{ fontSize: '1.15rem', fontWeight: 800, marginBottom: '8px' }}>Signature Presentation</h3>
             <p style={{ fontSize: '0.88rem', color: '#64748B', lineHeight: 1.6 }}>
-              Every GiggleThreads surprise is nestled in bespoke tissue shredding, tied with our signature satin ribbon, and accompanied by hand-written greeting cards.
+              Every Giggle Threads Private Limited surprise is nestled in bespoke tissue shredding, tied with our signature satin ribbon, and accompanied by hand-written greeting cards.
             </p>
           </div>
 

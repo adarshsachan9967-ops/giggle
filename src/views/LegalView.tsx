@@ -26,7 +26,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
             TRANSPARENCY &amp; TRUST
           </span>
           <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.6rem)', fontWeight: 800, color: '#1E2229', margin: '8px 0 12px' }}>
-            GiggleThreads Legal &amp; Policies
+            Giggle Threads Private Limited Legal &amp; Policies
           </h1>
           <p style={{ color: '#64748B', fontSize: '0.95rem' }}>
             Clear, honest terms designed to protect your peace of mind and gifting experience.
@@ -48,7 +48,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
         }}>
           <Info size={18} color="#3B82F6" style={{ flexShrink: 0 }} />
           <span>
-            <strong>Internal Compliance Note:</strong> These policies govern GiggleThreads customer transactions. Store administrators should ensure policies are periodically reviewed with legal advisors prior to multi-state commercial operations.
+            <strong>Internal Compliance Note:</strong> These policies govern Giggle Threads Private Limited customer transactions. Store administrators should ensure policies are periodically reviewed with legal advisors prior to multi-state commercial operations.
           </span>
         </div>
 
@@ -108,21 +108,21 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
             {activeTab === 'privacy' && (
               <div>
                 <h2 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1E2229', marginBottom: '8px' }}>
-                  GiggleThreads Privacy Policy
+                  Giggle Threads Private Limited Privacy Policy
                 </h2>
                 <div style={{ fontSize: '0.8rem', color: '#94A3B8', marginBottom: '24px' }}>
                   Last Updated: September 2026
                 </div>
 
                 <p>
-                  At <strong>GiggleThreads</strong> (operated by GiggleThreads Pvt. Ltd.), we are committed to safeguarding your personal information. This Privacy Policy details how we collect, handle, and protect your information when you shop with us online.
+                  At <strong>Giggle Threads Private Limited</strong>, we are committed to safeguarding your personal information. This Privacy Policy details how we collect, handle, and protect your information when you shop with us online.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
                   1. Information We Collect
                 </h3>
                 <p>
-                  We collect information necessary to fulfill your gift orders, including your name, delivery address, contact email, recipient phone number, and personalized engraving texts. When you checkout, your payment information is directly handled by our RBI-compliant payment gateway partner, <strong>Razorpay</strong>; GiggleThreads does not store credit card numbers or PINs.
+                  We collect information necessary to fulfill your gift orders, including your name, delivery address, contact email, recipient phone number, and personalized engraving texts. When you checkout, your payment information is directly handled by our RBI-compliant payment gateway partner, <strong>Razorpay</strong>; Giggle Threads Private Limited does not store credit card numbers or PINs.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
@@ -136,7 +136,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
                   3. Data Security &amp; Retention
                 </h3>
                 <p>
-                  GiggleThreads maintains strict physical, electronic, and administrative safeguards. All communications on our storefront utilize 256-bit SSL encryption. Personalization files (such as customer photo uploads for custom mugs) are stored in secure buckets and automatically purged 60 days following successful order delivery.
+                  Giggle Threads Private Limited maintains strict physical, electronic, and administrative safeguards. All communications on our storefront utilize 256-bit SSL encryption. Personalization files (such as customer photo uploads for custom mugs) are stored in secure buckets and automatically purged 60 days following successful order delivery.
                 </p>
               </div>
             )}
@@ -152,28 +152,28 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
                 </div>
 
                 <p>
-                  Welcome to <strong>GiggleThreads</strong>. By accessing or using our website, products, and services, you agree to comply with and be bound by the following Terms &amp; Conditions.
+                  Welcome to <strong>Giggle Threads Private Limited</strong>. By accessing or using our website, products, and services, you agree to comply with and be bound by the following Terms &amp; Conditions.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
                   1. Product Descriptions &amp; Pricing
                 </h3>
                 <p>
-                  We strive to ensure all product images, specifications, and prices displayed on GiggleThreads are accurate. However, slight handmade variations in wooden grain texture, hand-stitched plush toys, or color tones due to display calibrations may occur and celebrate the artisanal quality of our gifts.
+                  We strive to ensure all product images, specifications, and prices displayed on Giggle Threads Private Limited are accurate. However, slight handmade variations in wooden grain texture, hand-stitched plush toys, or color tones due to display calibrations may occur and celebrate the artisanal quality of our gifts.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
                   2. Order Acceptance
                 </h3>
                 <p>
-                  Receipt of an order confirmation does not signify our final acceptance of your order. GiggleThreads reserves the right to accept or decline your order in cases of stock shortages, incorrect pricing errors, or inability to authorize payment.
+                  Receipt of an order confirmation does not signify our final acceptance of your order. Giggle Threads Private Limited reserves the right to accept or decline your order in cases of stock shortages, incorrect pricing errors, or inability to authorize payment.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
                   3. Intellectual Property
                 </h3>
                 <p>
-                  All content, logos, illustrations, product descriptions, and typography on this site are the exclusive intellectual property of GiggleThreads Pvt. Ltd. and protected under applicable copyright laws.
+                  All content, logos, illustrations, product descriptions, and typography on this site are the exclusive intellectual property of Giggle Threads Private Limited and protected under applicable copyright laws.
                 </p>
               </div>
             )}
@@ -189,7 +189,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
                 </div>
 
                 <p>
-                  At <strong>GiggleThreads</strong>, we want every gift to spark genuine smiles. If an item arrives damaged, defective, or incorrect, our 7-Day Hassle-Free Replacement Policy protects you.
+                  At <strong>Giggle Threads Private Limited</strong>, we want every gift to spark genuine smiles. If an item arrives damaged, defective, or incorrect, our 7-Day Hassle-Free Replacement Policy protects you.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
@@ -219,7 +219,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
                 </h2>
 
                 <p>
-                  GiggleThreads partners with leading courier networks (BlueDart, Delhivery, DTDC) to ensure timely, gentle delivery of your precious surprises across 19,000+ Indian postal codes.
+                  Giggle Threads Private Limited partners with leading courier networks (BlueDart, Delhivery, DTDC) to ensure timely, gentle delivery of your precious surprises across 19,000+ Indian postal codes.
                 </p>
 
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1E2229', margin: '24px 0 10px' }}>
@@ -252,7 +252,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = 'privacy' }) 
                   Cookie Policy
                 </h2>
                 <p>
-                  GiggleThreads uses essential first-party cookies and local storage to remember your Giggle Basket items, keep you securely signed in, and remember your coupon codes. We do not employ aggressive cross-site ad-tracking cookies.
+                  Giggle Threads Private Limited uses essential first-party cookies and local storage to remember your Giggle Basket items, keep you securely signed in, and remember your coupon codes. We do not employ aggressive cross-site ad-tracking cookies.
                 </p>
               </div>
             )}

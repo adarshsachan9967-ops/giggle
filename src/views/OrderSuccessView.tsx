@@ -136,7 +136,7 @@ export const OrderSuccessView: React.FC<OrderSuccessViewProps> = ({ orderId, onN
             <div>
               <Logo variant="invoice" size="md" showTagline={true} />
               <div style={{ fontSize: '0.8rem', color: '#64748B', marginTop: '8px', lineHeight: 1.4 }}>
-                GiggleThreads Private Limited<br />
+                Giggle Threads Private Limited<br />
                 {settings?.address || '707, 7th Floor, Satyam, RDC, Raj Nagar, Ghaziabad, UP, IND 201002'}<br />
                 GSTIN: 29AABCU9603R1ZM • {settings?.supportEmail || 'threadpvtltdgiggles@gmail.com'} • {settings?.supportPhone || '+91 92113 23431'}
               </div>
@@ -260,7 +260,7 @@ export const OrderSuccessView: React.FC<OrderSuccessViewProps> = ({ orderId, onN
             fontSize: '0.82rem',
             color: '#64748B',
           }}>
-            Thank you for shopping at <strong>GiggleThreads</strong>! "Little gifts. Big giggles. Beautiful memories." ❤️
+            Thank you for shopping at <strong>Giggle Threads Private Limited</strong>! "Little gifts. Big giggles. Beautiful memories." ❤️
           </div>
         </div>
       </div>

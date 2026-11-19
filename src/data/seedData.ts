@@ -1,7 +1,7 @@
 import { Product, CategoryInfo, OccasionInfo, Banner, Coupon, Order, Customer, StoreSettings, Review } from '../types';
 
 export const INITIAL_SETTINGS: StoreSettings = {
-  storeName: 'GiggleThreads',
+  storeName: 'Giggle Threads Private Limited',
   tagline: 'Gifts That Spark Giggles & Memories.',
   supportEmail: 'threadpvtltdgiggles@gmail.com',
   supportPhone: '+91 92113 23431',

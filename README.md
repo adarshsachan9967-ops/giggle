@@ -158,4 +158,4 @@ giggle/
 
 ## 📄 License
 
-This project is proprietary and created for **GiggleThreads**. All rights reserved.
+This project is proprietary and created for **Giggle Threads Private Limited**. All rights reserved.

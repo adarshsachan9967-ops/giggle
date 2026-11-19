@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       return;
     }
     setIsSubscribed(true);
-    showToast('Yay! You are now subscribed to GiggleThreads smiles! 🎉', 'success');
+    showToast('Yay! You are now subscribed to Giggle Threads smiles! 🎉', 'success');
     setNewsletterEmail('');
   };
 
@@ -104,8 +104,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Brand Info */}
           <div>
             <Logo variant="white" size="lg" showTagline={true} onClick={() => onNavigate('home')} />
-            <p style={{ color: '#94A3B8', fontSize: '0.9rem', lineHeight: 1.6, marginTop: '16px', maxWidth: '320px' }}>
-              At <strong>GiggleThreads</strong>, we believe the best gifts are the ones that create a moment. From cuddly companions to thoughtful personalized surprises, we craft smiles worth remembering.
+            <div style={{ marginTop: '16px', fontSize: '0.92rem', color: '#FFFFFF', fontWeight: 700, letterSpacing: '0.01em' }}>
+              Giggle Threads Private Limited
+            </div>
+            <p style={{ color: '#94A3B8', fontSize: '0.9rem', lineHeight: 1.6, marginTop: '8px', maxWidth: '320px' }}>
+              At <strong>Giggle Threads Private Limited</strong>, we believe the best gifts are the ones that create a moment. From cuddly companions to thoughtful personalized surprises, we craft smiles worth remembering.
             </p>
 
             {/* Contact Details */}
@@ -298,7 +301,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           lineHeight: 1.6,
         }}>
           <div>
-            &copy; 2025 <strong>GiggleThreads</strong>. All rights reserved. Made with love for little moments and big smiles.
+            &copy; 2025 <strong>Giggle Threads Private Limited</strong>. All rights reserved. Made with love for little moments and big smiles.
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px' }}>

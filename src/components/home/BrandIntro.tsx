@@ -47,7 +47,7 @@ export const BrandIntro: React.FC = () => {
               marginBottom: '20px',
               fontFamily: 'var(--font-heading)',
             }}>
-              Welcome to <span className="text-gradient">GiggleThreads</span>
+              Welcome to <span className="text-gradient">Giggle Threads Private Limited</span>
             </h2>
 
             <p style={{
@@ -56,7 +56,7 @@ export const BrandIntro: React.FC = () => {
               lineHeight: 1.7,
               marginBottom: '16px',
             }}>
-              At <strong>GiggleThreads</strong>, we believe the best gifts are the ones that create a moment. From playful toys and cuddly companions to thoughtful personalized surprises, we make it easy to find something that brings a genuine smile.
+              At <strong>Giggle Threads Private Limited</strong>, we believe the best gifts are the ones that create a moment. From playful toys and cuddly companions to thoughtful personalized surprises, we make it easy to find something that brings a genuine smile.
             </p>
 
             <p style={{
@@ -65,7 +65,7 @@ export const BrandIntro: React.FC = () => {
               lineHeight: 1.7,
               marginBottom: '32px',
             }}>
-              Whether you're celebrating a birthday, anniversary, festival, friendship or simply saying <em>"I'm thinking of you"</em>, GiggleThreads helps you make every occasion a little more magical.
+              Whether you're celebrating a birthday, anniversary, festival, friendship or simply saying <em>"I'm thinking of you"</em>, Giggle Threads Private Limited helps you make every occasion a little more magical.
             </p>
 
             {/* Core Values / Smiles Pillars */}

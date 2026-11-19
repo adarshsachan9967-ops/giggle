@@ -141,21 +141,21 @@ const parseRouteFromLocation = (): RouteInfo => {
 
 const updateDocumentTitle = (view: string, param?: string) => {
   if (view === 'home') {
-    document.title = 'GiggleThreads | Gifts, Toys & Smiles for Every Occasion';
+    document.title = 'Giggle Threads Private Limited | Gifts, Toys & Smiles for Every Occasion';
   } else if (view === 'product' && param) {
     const prod = store.getProductBySlug(param);
-    document.title = prod ? `${prod.title} — GiggleThreads` : 'Product Details — GiggleThreads';
+    document.title = prod ? `${prod.title} — Giggle Threads Private Limited` : 'Product Details — Giggle Threads Private Limited';
   } else if (view === 'category' && param) {
     const formatted = param.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-    document.title = `${formatted} — GiggleThreads`;
+    document.title = `${formatted} — Giggle Threads Private Limited`;
   } else if (view === 'occasion' && param) {
     const formatted = param.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-    document.title = `${formatted} Gifts — GiggleThreads`;
+    document.title = `${formatted} Gifts — Giggle Threads Private Limited`;
   } else if (view === 'admin') {
-    document.title = 'GiggleThreads Admin Portal';
+    document.title = 'Giggle Threads Private Limited Admin Portal';
   } else {
     const formatted = view.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-    document.title = `${formatted} — GiggleThreads`;
+    document.title = `${formatted} — Giggle Threads Private Limited`;
   }
 };
 

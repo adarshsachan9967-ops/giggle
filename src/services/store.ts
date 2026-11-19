@@ -69,6 +69,10 @@ class Store {
         this.settings.supportPhone = INITIAL_SETTINGS.supportPhone;
         this.saveToStorage(STORAGE_KEYS.SETTINGS, this.settings);
       }
+      if (!this.settings?.storeName || this.settings.storeName === 'GiggleThreads') {
+        this.settings.storeName = INITIAL_SETTINGS.storeName;
+        this.saveToStorage(STORAGE_KEYS.SETTINGS, this.settings);
+      }
       this.cart = this.loadFromStorage(STORAGE_KEYS.CART, []);
       this.wishlist = this.loadFromStorage(STORAGE_KEYS.WISHLIST, []);
       this.appliedCoupon = this.loadFromStorage(STORAGE_KEYS.APPLIED_COUPON, null);

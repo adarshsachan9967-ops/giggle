@@ -30,13 +30,13 @@ export const ContactView: React.FC = () => {
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '44px' }}>
           <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FF5B60', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            CONNECT WITH GIGGLETHREADS
+            CONNECT WITH GIGGLE THREADS PRIVATE LIMITED
           </span>
           <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 800, color: '#1E2229', margin: '8px 0 12px' }}>
             We're Here to Help.
           </h1>
           <p style={{ color: '#475569', fontSize: '1.05rem', maxWidth: '640px', margin: '0 auto', lineHeight: 1.6 }}>
-            Whether you need help choosing a gift, tracking an order or simply have a question, the GiggleThreads team is always happy to help.
+            Whether you need help choosing a gift, tracking an order or simply have a question, the Giggle Threads Private Limited team is always happy to help.
           </p>
         </div>
 
@@ -51,9 +51,12 @@ export const ContactView: React.FC = () => {
               border: '1px solid #EFE4DC',
               boxShadow: 'var(--shadow-xs)',
             }}>
-              <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#1E2229', marginBottom: '20px' }}>
+              <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#1E2229', marginBottom: '4px' }}>
                 Contact Information
               </h3>
+              <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#FF5B60', marginBottom: '20px' }}>
+                Giggle Threads Private Limited
+              </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <div style={{ display: 'flex', gap: '14px' }}>
@@ -87,8 +90,9 @@ export const ContactView: React.FC = () => {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#1E2229' }}>Studio &amp; Dispatch Hub</div>
+                    <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#1E2229' }}>Registered Office &amp; Dispatch Hub</div>
                     <div style={{ color: '#475569', fontSize: '0.88rem', lineHeight: 1.5 }}>
+                      <strong>Giggle Threads Private Limited</strong><br />
                       {settings.address}
                     </div>
                   </div>
@@ -130,7 +134,7 @@ export const ContactView: React.FC = () => {
                   Need Immediate Gifting Advice?
                 </div>
                 <div style={{ fontSize: '0.82rem', color: '#047857' }}>
-                  Chat with a GiggleThreads Gift Stylist on WhatsApp (+91 92113 23431) for instant birthday and anniversary recommendations.
+                  Chat with a Giggle Threads Private Limited Gift Stylist on WhatsApp (+91 92113 23431) for instant birthday and anniversary recommendations.
                 </div>
               </div>
             </a>
@@ -164,7 +168,7 @@ export const ContactView: React.FC = () => {
                   Message Sent Successfully!
                 </h4>
                 <p style={{ color: '#64748B', fontSize: '0.9rem', marginBottom: '18px' }}>
-                  Thank you for reaching out to GiggleThreads. Our smile team will respond to <strong>{email}</strong> shortly.
+                  Thank you for reaching out to Giggle Threads Private Limited. Our smile team will respond to <strong>{email}</strong> shortly.
                 </p>
                 <button className="btn btn-secondary btn-sm" onClick={() => setSubmitted(false)}>
                   Send Another Message
@@ -228,7 +232,7 @@ export const ContactView: React.FC = () => {
                   <label className="form-label">Your Message *</label>
                   <textarea 
                     className="form-textarea" 
-                    placeholder="How can GiggleThreads help spark smiles for you today?..."
+                    placeholder="How can Giggle Threads Private Limited help spark smiles for you today?..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
